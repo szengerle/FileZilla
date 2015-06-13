@@ -7,8 +7,8 @@ Requirements
 * Currently only Windows is supported, Mac OS and Linux are coming
 * Chef 10.24+ or 11+
 
-[![Github Version](https://badge.fury.io/gh/lancepowell%2FileZilla.svg)](http://badge.fury.io/gh/lancepowell%2FileZilla)
-[![Code Climate](https://codeclimate.com/github/lancepowell/FileZilla/badges/gpa.svg)](https://codeclimate.com/github/lancepowel/FileZilla)
+[![Github Version](https://badge.fury.io/gh/lancepowell%2FFileZilla.svg)](http://badge.fury.io/gh/lancepowell%2FFileZilla)
+[![Code Climate](https://codeclimate.com/github/lancepowell/FileZilla/badges/gpa.svg)](https://codeclimate.com/github/lancepowell/FileZilla)
 
 Usage
 -----
