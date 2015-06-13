@@ -21,15 +21,15 @@
 # Add _server.rb to install the server
 
 case node['platform']
-	when 'windows'
+  when 'windows'
 
-		windows_package "FileZilla Client" do
-			source node['filezilla']['url']
-			installer_type :custom
-			options "/S /user=all"
-			action :install
-		end
-
+     windows_package "FileZilla Client" do
+		source node['filezilla']['url']
+		installer_type :custom
+		options "/S /user=all"
+		action :install
+	  end
+	  
 else
   Chef::Log.warn('FileZilla Client can only be installed on the Windows at this time.')
 end
