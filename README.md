@@ -17,7 +17,7 @@ Include the default recipe in your role:
 ```json
 {
 	"run_list": [
-	'recipe[filezilla::default]'
+	recipe['filezilla::default']
 	]
 }
 ```
