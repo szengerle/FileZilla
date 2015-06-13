@@ -2,6 +2,11 @@
 ====================
 Installs the latest version of the FileZilla Client
 
+Attributes
+----------
+
+default['filezilla']['url'] = http://sourceforge.net/projects/filezilla/files/latest/download?source=files
+
 Requirements
 ------------
 * Currently only Windows is supported, Mac OS and Linux are coming
