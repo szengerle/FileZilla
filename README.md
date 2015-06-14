@@ -5,8 +5,10 @@ Installs the latest version of the FileZilla Client
 Attributes
 ----------
 
+See default attributes file for specifics on  how this is used.
+
 ```ruby
-default['filezilla']['url'] = http://sourceforge.net/projects/filezilla/files/latest/download?source=files
+default['filezilla']['version'] = '3.11.0.2'
 ```
 
 Requirements
@@ -36,11 +38,11 @@ Documentation
 -------------
 More in depth documentation is always being written along with automated testing
 
-License & Authors
+Authors
 -----------------
 - Author:: Lance Powell (lanceraymondpowell@gmail.com)
 
-### I adopted the FileZilla Cookbook
+#### I adopted the FileZilla Cookbook
 - Location:: https://github.com/Webtrends/Filezilla
 
 ```text

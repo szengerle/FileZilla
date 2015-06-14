@@ -23,12 +23,25 @@
 case node['platform']
   when 'windows'
 
-     windows_package "FileZilla Client" do
-		source node['filezilla']['url']
+  	filezilla = remote_file node['filezilla']['exe'] do
+  	  source node['filezilla']['url']
+  	  path File.join('C:\\',node['filezilla']['exe'])
+  	  action :create
+  	end
+  	
+     windows_package "FileZilla Install" do
+		source File.join('C:\\',node['filezilla']['exe'])
+		installer_type :custom
 		options "/S /user=all"
 		action :install
 	  end
+
+# Remove the downloaded exe
+    file File.join('C:\\',node['filezilla']['exe']) do
+      action :delete
+      only_if { filezilla.updated_by_last_action? }
+    end
 	  
 else
-  Chef::Log.warn('FileZilla Client can only be installed on the Windows at this time.')
+  Chef::Log.warn('The FileZilla Client can only be installed on the Windows at this time.')
 end
