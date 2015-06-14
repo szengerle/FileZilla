@@ -25,7 +25,6 @@ case node['platform']
 
      windows_package "FileZilla Client" do
 		source node['filezilla']['url']
-		installer_type :custom
 		options "/S /user=all"
 		action :install
 	  end
