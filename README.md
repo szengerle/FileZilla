@@ -8,7 +8,7 @@ Attributes
 See default attributes file for specifics on  how this is used.
 
 ```ruby
-default['filezilla']['version'] = '3.11.0.2'
+default['filezilla']['version'] = '3.12.0'
 ```
 
 Requirements
