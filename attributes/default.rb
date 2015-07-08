@@ -1,5 +1,5 @@
 # The version is the only attribute that needs to be changed when a newer version is released.
-default['filezilla']['version'] = '3.11.0.2'
+default['filezilla']['version'] = '3.12.0'
 
 version = default['filezilla']['version']
 

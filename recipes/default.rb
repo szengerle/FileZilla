@@ -43,5 +43,5 @@ case node['platform']
     end
 	  
 else
-  Chef::Log.warn('The FileZilla Client can only be installed on the Windows at this time.')
+  Chef::Log.warn('The FileZilla Client can only be installed on Windows at this time.')
 end
