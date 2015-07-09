@@ -26,8 +26,8 @@ In testing on ubuntu you need to run ```sudo apt-get update``` on the opscode ki
 
 | Platform Family  | Requires |
 | ------------- | ------------- |
-| RHEL  | ```gnutls```  |
-| Ubuntu | ```sudo apt-get update ``` |
+| RHEL  | gnutls |
+| Ubuntu | sudo apt-get update  |
 
 
 
