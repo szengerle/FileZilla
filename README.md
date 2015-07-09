@@ -2,22 +2,35 @@
 ====================
 Installs the latest version of the FileZilla Client
 
+[![GitHub version](https://badge.fury.io/gh/lancepowell%2FFileZilla.svg)](http://badge.fury.io/gh/lancepowell%2FFileZilla)
+[![Code Climate](https://codeclimate.com/github/lancepowell/FileZilla/badges/gpa.svg)](https://codeclimate.com/github/lancepowell/FileZilla)
+
 Attributes
 ----------
 
-See default attributes file for specifics on  how this is used.
+ - Windows needs a version specified, see default attributes file for specifics on how this is used.
+ - Linux Distributions contain no attributes, they pull the version using the package resource
 
+Windows Only
 ```ruby
 default['filezilla']['version'] = '3.12.0'
 ```
 
+
 Requirements
 ------------
-* Currently only Windows is supported, Mac OS and Linux are coming
-* Chef 10.24+ or 11+
+* Chef 11+
+* EPEL
 
-[![GitHub version](https://badge.fury.io/gh/lancepowell%2FFileZilla.svg)](http://badge.fury.io/gh/lancepowell%2FFileZilla)
-[![Code Climate](https://codeclimate.com/github/lancepowell/FileZilla/badges/gpa.svg)](https://codeclimate.com/github/lancepowell/FileZilla)
+In testing on ubuntu you need to run <code>sudo apt-get update<code> on the opscode kitchen boxes prior to the install being successful.
+
+| Platform Family  | Requires |
+| ------------- | ------------- |
+| RHEL  | <code>gnutls<code>  |
+
+| Ubuntu | <code>sudo apt-get update <code>
+
+
 
 Usage
 -----
@@ -34,10 +47,6 @@ Include the default recipe in your role:
 }
 ```
 
-Documentation
--------------
-More in depth documentation is always being written along with automated testing
-
 Authors
 -----------------
 - Author:: Lance Powell (lanceraymondpowell@gmail.com)
@@ -46,7 +55,7 @@ Authors
 - Location:: https://github.com/Webtrends/Filezilla
 
 ```text
-Copyright:: 2015, The Authors
+Copyright:: 2015, Lance Powell
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
