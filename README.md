@@ -13,7 +13,7 @@ Attributes
 
 Windows Only
 ```ruby
-default['filezilla']['version'] = '3.12.0'
+default['filezilla']['version'] = '3.12.0.2'
 ```
 
 
@@ -50,7 +50,7 @@ Authors
 -----------------
 - Author:: Lance Powell (lanceraymondpowell@gmail.com)
 
-#### I adopted the FileZilla Cookbook
+#### I adopted the Original FileZilla Cookbook
 - Location:: https://github.com/Webtrends/Filezilla
 
 ```text
