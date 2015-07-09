@@ -12,7 +12,7 @@ Attributes
  - Linux Distributions contain no attributes, they pull the version using the package resource
 
 Windows Only
-```
+```ruby
 default['filezilla']['version'] = '3.12.0.2'
 ```
 
