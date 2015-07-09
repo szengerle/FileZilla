@@ -22,13 +22,12 @@ Requirements
 * Chef 11+
 * EPEL
 
-In testing on ubuntu you need to run <code>sudo apt-get update<code> on the opscode kitchen boxes prior to the install being successful.
+In testing on ubuntu you need to run <code>sudo apt-get update</code> on the opscode kitchen boxes prior to the install being successful.
 
 | Platform Family  | Requires |
 | ------------- | ------------- |
-| RHEL  | <code>gnutls<code>  |
-
-| Ubuntu | <code>sudo apt-get update <code>
+| RHEL  | <code>gnutls</code>  |
+| Ubuntu | <code>sudo apt-get update </code>
 
 
 
