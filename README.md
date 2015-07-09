@@ -11,7 +11,8 @@ Attributes
  - Windows needs a version specified, see default attributes file for specifics on how this is used.
  - Linux Distributions contain no attributes, they pull the version using the package resource
 
-Windows Only
+Windows Only Attribute
+
 ```ruby
 default['filezilla']['version'] = '3.12.0.2'
 ```
