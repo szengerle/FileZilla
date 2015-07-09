@@ -67,7 +67,7 @@ case node['platform_family']
     package 'filezilla' do
       action :install
     end
-else
+else # ubuntu
   package 'filezilla' do
     action :install
   end
