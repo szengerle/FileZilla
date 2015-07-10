@@ -21,7 +21,7 @@ default['filezilla']['version'] = '3.12.0.2'
 Requirements
 ------------
 * Chef 11+
-* EPEL
+* EPEL (Note I am installing the EPEL with this cookbook)
 
 In testing on ubuntu you need to run ```sudo apt-get update``` on the opscode kitchen boxes prior to the install being successful.
 
