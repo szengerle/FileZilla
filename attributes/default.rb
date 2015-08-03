@@ -1,6 +1,7 @@
 # The version is the only attribute that needs to be changed when a newer version is released.
 if platform_family?('windows')
   default['filezilla']['version'] = '3.12.0.2'
+  default['filezilla']['name'] = 'FileZilla Client 3.12.0.2'
 
   version = default['filezilla']['version']
 

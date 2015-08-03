@@ -23,27 +23,15 @@
 case node['platform_family']
   when 'windows'
 
-  	filezilla = remote_file node['filezilla']['exe'] do
-  	  source node['filezilla']['url']
-  	  path File.join('C:\\',node['filezilla']['exe'])
-  	  action :create
-  	end
-  	
-     windows_package "FileZilla Install" do
-		source File.join('C:\\',node['filezilla']['exe'])
-		installer_type :custom
-		options "/S /user=all"
-		action :install
-	  end
-
-# Remove the downloaded exe
-    file File.join('C:\\',node['filezilla']['exe']) do
-      action :delete
-      only_if { filezilla.updated_by_last_action? }
-    end
+  windows_package node['filezilla']['name'] do
+    source node['filezilla']['url']
+        installer_type :custom
+        options "/S /user=all"
+        action :install
+	end
 
   when 'rhel'
-  if node['platform_version'] < '7'	  
+  if node['platform_version'] < '7'
     yum_repository 'epel' do
       description 'Extra Packages for Enterprise Linux'
       mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
@@ -51,7 +39,7 @@ case node['platform_family']
       action :create
     end
 
-    else 
+    else
       yum_repository 'epel' do
         description 'Extra Packages for Enterprise Linux'
         mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-7&arch=$basearch'
@@ -63,7 +51,7 @@ case node['platform_family']
     package 'gnutls' do
       action :install
     end
-      
+
     package 'filezilla' do
       action :install
     end
@@ -71,5 +59,5 @@ else # ubuntu
   package 'filezilla' do
     action :install
   end
-  
+
 end
